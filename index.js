@@ -19,7 +19,7 @@ const render = () => ReactDOM.render(
 render()
 store.subscribe(render)*/
 
-export default class DoubleRedux extends Component {
+class DoubleRedux extends Component {
     constructor(props) {
         super(props)
 
@@ -42,3 +42,5 @@ export default class DoubleRedux extends Component {
         return <Counter value={store.getState()} onIncrement={() => store.dispatch({ type: 'INCREMENT' })} onDecrement={() => store.dispatch({ type: 'DECREMENT' })} />
     }
 }
+
+module.exports = DoubleRedux
